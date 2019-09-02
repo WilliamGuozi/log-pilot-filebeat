@@ -11,7 +11,7 @@
   {{if eq .Format "json"}}
   json.keys_under_root: true
   {{end}}
-  multiline.pattern: '^[[:space:]]|^Caused by:'
+  multiline.pattern: '^[[:space:]]|^Caused by:|^{|^com|^org'
   multiline.negate: false
   multiline.match: after
   fields:
