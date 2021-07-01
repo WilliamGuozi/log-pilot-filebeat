@@ -1,9 +1,8 @@
-{{range .configList}}
 - type: log
   enabled: true
   paths:
-      - {{ .HostDir }}/{{ .File }}
-  scan_frequency: 10s
+      - "{{ .HostDir }}/{{ .File }}"
+  scan_frequency: 1s
   fields_under_root: true
   {{if .Stdout}}
   docker-json: true
@@ -21,11 +20,15 @@
       {{range $key, $value := $.container}}
       {{ $key }}: {{ $value }}
       {{end}}
-  tail_files: false
+# 性能优化
+  harvester_buffer_size: 40960000
+  filebeat.spool_size: 250000
+  filebeat.idle_timeout: 1s
+  tail_files: true
   close_inactive: 2h
   close_eof: false
   close_removed: true
   clean_removed: true
-  close_renamed: false
+  close_renamed: true
 
 {{end}}
