@@ -33,7 +33,7 @@
   close_eof: false
   close_removed: true
   clean_removed: true
-  close_renamed: false
+#  close_renamed: false
   close_renamed: true
 
 {{end}}
