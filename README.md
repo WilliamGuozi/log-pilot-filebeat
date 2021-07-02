@@ -41,6 +41,6 @@ docker run -d \
 
 ## Contributing
 
-Thanks for my colleague [Wei Shuyu](https://github.com/wsy2220) who rewrite log-pilot to support containerd of k3s!
+Thanks for my colleague [Wei Shuyu](https://github.com/wsy2220/log-pilot/tree/containerd) who rewrite log-pilot to support containerd of k3s!
 
 
