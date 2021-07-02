@@ -1,4 +1,4 @@
-FROM williamguozi/log-pilot-filebeat:containerd
+FROM williamguozi/log-pilot-filebeat:containerd.ori
 
 MAINTAINER "WilliamGuo <634206396@qq.com>"
 WORKDIR /pilot/
