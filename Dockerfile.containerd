@@ -1,0 +1,8 @@
+FROM williamguozi/log-pilot-filebeat:containerd
+
+MAINTAINER "WilliamGuo <634206396@qq.com>"
+WORKDIR /pilot/
+COPY filebeat.tpl /pilot
+COPY config.filebeat /pilot
+RUN chmod +x /pilot/config.filebeat
+ENTRYPOINT ["/pilot/entrypoint"]

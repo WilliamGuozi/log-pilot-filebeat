@@ -25,15 +25,14 @@
    - drop_fields:
        fields: ["index"]
 # 性能优化
-#  harvester_buffer_size: 40960000
-#  filebeat.spool_size: 250000
-#  filebeat.idle_timeout: 1s
+  harvester_buffer_size: 40960000
+  filebeat.spool_size: 250000
+  filebeat.idle_timeout: 1s
   tail_files: false
   close_inactive: 2h
   close_eof: false
   close_removed: true
   clean_removed: true
-#  close_renamed: false
   close_renamed: true
 
 {{end}}
